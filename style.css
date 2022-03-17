@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&display=swap');
+
+:root {
+  --rolex-green: rgba(0, 96, 57, 1);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,20 +12,27 @@
 
 body {
   background-color: rgb(231, 231, 47);
+  font-family: 'EB Garamond', serif;
+}
+
+.title {
+  text-align: center;
+  padding: 3rem;
+  color: var(--rolex-green);
 }
 
 .container {
   height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .clock {
-  background: rgb(72, 153, 0);
+  background: var(--rolex-green);
   background: radial-gradient(
     circle,
-    rgba(72, 153, 0, 1) 0%,
+    var(--rolex-green) 0%,
     rgba(3, 51, 0, 1) 100%
   );
   border: 10px solid goldenrod;
@@ -27,6 +40,32 @@ body {
   width: 400px;
   height: 400px;
   position: relative;
+}
+
+.crown-logo {
+  position: absolute;
+  left: 50%;
+  padding-top: 0.5em;
+  transform: translate(-50%);
+  color: goldenrod;
+}
+
+.upper-text {
+  color: goldenrod;
+  text-align: center;
+  padding-top: 2em;
+}
+
+.upper-text > p:nth-child(2) {
+  font-size: small;
+}
+
+.lower-text {
+  position: absolute;
+  color: goldenrod;
+  bottom: 20%;
+  left: 50%;
+  transform: translate(-50%);
 }
 
 .middle-ring {

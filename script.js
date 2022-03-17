@@ -16,7 +16,7 @@ function renderTime() {
   const hoursDegrees = calcHandPosition(now.getHours() / 12);
   hourHand.style.transform = `rotate(${hoursDegrees}deg)`;
 
-  setTimeout(renderTime, 1000);
+  setTimeout(renderTime, 100);
 }
 
 renderTime();
